@@ -24,11 +24,23 @@ Open your terminal, and navigate to the folder where you cloned this repository.
 
 Once inside, type `git status` to check and make sure you are in the right folder. If you are in the right folder, you will see what branch you are on. If you aren't you will likely see an error. This means you are not yet in the correct folder.
 
+You should also be able to run our bubble sort code. Try running `python3 bubble.py` in your command line.
+
 To create your first branch, type `git checkout -b feature/my-first-branch`. This will create your new branch locally.
 
-From here, we can modify our code:
+From here, we can now start to modify our code.
 
-# code modifications here
+### Modifying our code
+
+Lets start by modifying our code to take in the array to sort as arguments.
+
+First, lets initialize our array, `arr`, to be empty. `arr = []`.
+
+Then we will also need to add a for loop to appends all our arguements to the array except the python file we are running. That will look something like `for i in range(1, len(sys.argv)):` with our for loop containing a single line of code `arr.append(int(sys.argv[i]))`.
+
+Finally, before running this, we will need to import sys, so go ahead and stick `import sys` somewhere towards the top of your code.
+
+Now, try running something like `python bubble.py 4 3 2` and you should see the correct output!
 
 Then, once we are finished, we can add all of our changes with `git add .` which will add all modified files. Be care using the `.` in the future because this will add ALL files you modified, which might not always be your intention.
 
