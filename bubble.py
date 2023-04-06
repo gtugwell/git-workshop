@@ -3,6 +3,7 @@
 ##################################################################################
 
 # Python program for implementation of Bubble Sort
+import sys
 
 def bubbleSort(arr):
 	n = len(arr)
@@ -30,7 +31,10 @@ def bubbleSort(arr):
 
 
 # Driver code to test above
-arr = [64, 34, 25, 12, 22, 11, 90]
+arr = []
+
+for i in range(1, len(sys.argv)):
+    arr.append(int(sys.argv[i]))
 
 bubbleSort(arr)
 
